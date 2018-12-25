@@ -22,5 +22,7 @@ steps:
     Contents: |
      SampleConsoleApp/bin/Release/netcoreapp2.1\**\!(*.pdb|*.config)
      SampleConsoleApp/bin/Release/netcoreapp2.1\**\!(*.dll|*.json)
+     /home/vsts/work/1/s/SampleConsoleApp/bin/Release/netcoreapp2.1/**\!(*.pdb|*.config)
+     /home/vsts/work/1/s/SampleConsoleApp/bin/Release/netcoreapp2.1/**\!(*.dll|*.json)
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 

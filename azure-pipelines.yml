@@ -19,7 +19,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    SourceFolder: '$(Build.BuildDirectory)'
+    SourceFolder: '$(Agent.BuildDirectory)'
     Contents: |
      \**\!(*.pdb|*.config)
      \**\!(*.dll|*.json)

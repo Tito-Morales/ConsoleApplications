@@ -21,7 +21,6 @@ steps:
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)'
     Contents: |
-     \**\!(*.pdb|*.config)
-     \**\!(*.dll|*.json)
+     \**\(*.dll|*.json|*.pdb)
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 

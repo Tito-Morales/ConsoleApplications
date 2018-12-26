@@ -14,14 +14,6 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
-          dotnet publish --configuration $(buildConfiguration) --output out
+          dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
   displayName: 'dotnet build $(buildConfiguration)'
-
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    SourceFolder: '/home/vsts/work/1/s/SampleConsoleApp/bin/Release/netcoreapp2.1/'
-    Contents: |
-     \**\(*.dll|*.json|*.pdb)
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
